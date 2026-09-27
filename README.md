@@ -72,6 +72,28 @@ are computed by conjugating a quarter-turn in the `z`-coordinate.
 python plot_symmetry.py --output figures/08-fourfold-panel-closeup.png
 ```
 
+## The same symmetry in the w-plane
+
+`plot_w_symmetry.py` lifts the four panel markers to a straight sequence of
+translations in the `w`-plane. It uses the same starting point and sign colors
+as the panel close-up, with equal unit lengths on the `u` and `v` axes.
+
+\[
+\tau=\frac{\pi i}{2\lambda}=3P_u+2iP_v,
+\qquad w_k=\frac{\ln 2+0.5i}{\lambda}+k\tau.
+\]
+
+The fifth marker, `4`, differs from marker `0` by `2πi/λ`. They are distinct
+points of the `w`-plane but give the same point after exponentiation, and
+therefore the same panel point. This is how an infinite-order translation of
+the covering plane induces an order-four symmetry on the panel. The small
+right-angle guide resolves one step into three horizontal and two vertical
+periods of the height field.
+
+```sh
+python plot_w_symmetry.py --output figures/09-fourfold-w-plane.png
+```
+
 This repository contains generators for the article's mathematical and
 construction **figures**. It does not contain the CNC mesh generator for the
 physical panel.
